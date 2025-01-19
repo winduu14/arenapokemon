@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arena Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="arena">
+        <div id="player1">
+            <h2>OKI WINDU</h2>
+            <div id="hp-bar1">
+                <div id="hp1"></div>
+            </div>
+            <p id="hp-value1">500/1000</p>
+            <input type="number" id="damage1" placeholder="Masukkan Damage">
+            <button id="heal-button1">Tambah HP +120</button>
+        </div>
+        <div id="vs">VS</div>
+        <div id="player2">
+            <h2>GILANG</h2>
+            <div id="hp-bar2">
+                <div id="hp2"></div>
+            </div>
+            <p id="hp-value2">500/1000</p>
+            <input type="number" id="damage2" placeholder="Masukkan Damage">
+            <button id="heal-button2">Tambah HP +120</button>
+        </div>
+    </div>
+    <div id="button-container">
+        <button id="attack-button">Serang!</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
