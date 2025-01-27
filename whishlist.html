@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-3xl font-bold flex items-center">
+                <i class="fas fa-tasks mr-2"></i> Manajemen Aktivitas
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-white hover:text-gray-200 transition duration-200"><i class="fas fa-home mr-1"></i> Home</a>
+                <a href="jadwal.html" class="text-white hover:text-gray-200 transition duration-200"><i class="fas fa-calendar-alt mr-1"></i> Jadwal</a>
+                <a href="whishlist.html" class="text-white hover:text-gray-200 transition duration-200"><i class="fas fa-heart mr-1"></i> Wishlist</a>
+            </div>
+            <div class="md:hidden">
+                <button id="nav-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="nav-menu" class="hidden md:hidden">
+            <a href="index.html" class="block text-white p-4 hover:bg-blue-700 transition duration-200"><i class="fas fa-home mr-1"></i> Home</a>
+            <a href="jadwal.html" class="block text-white p-4 hover:bg-blue-700 transition duration-200"><i class="fas fa-calendar-alt mr-1"></i> Jadwal</a>
+            <a href="whishlist.html" class="block text-white p-4 hover:bg-blue-700 transition duration-200"><i class="fas fa-heart mr-1"></i> Wishlist</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-8 px-4">
+        <div class="text-center mb-8">
+            <div class="relative bg-white bg-opacity-75 p-6 rounded-lg shadow-lg inline-block">
+                <h2 class="text-2xl font-bold">Halaman Wishlist</h2>
+                <p class="text-gray-700">Kelola wishlist Anda di sini</p>
+            </div>
+        </div>
+
+        <!-- Cards Grid for Form and Results -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Card 1 - Embed Google Form -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="p-6">
+                    <h3 class="text-lg font-bold mb-2">Formulir Wishlist</h3>
+                    <p class="text-gray-700 mb-4">Isi formulir wishlist Anda di bawah ini.</p>
+                    <div class="overflow-x-auto">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfoVIrFq3cLwVqZqRU2BiRFrygGAIrYS4UEun0g6FxVO8_Shg/viewform?embedded=true" width="100%" height="480" class="rounded-lg border"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - Embed Google Form Results -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="p-6">
+                    <h3 class="text-lg font-bold mb-2">Hasil Formulir Wishlist</h3>
+                    <p class="text-gray-700 mb-4">Lihat hasil formulir Google Forms di bawah ini.</p>
+                    <div class="overflow-x-auto">
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSRvnkSdAqT0UoJiowNPG5YNQGC1fKuZ25K0YFBfZNlAr-0rHtvGJPmcXsP782sBAUPIhV6SX0-sCKE/pubhtml?widget=true&amp;headers=false" width="100%" height="480" class="rounded-lg border"></iframe>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSRvnkSdAqT0UoJiowNPG5YNQGC1fKuZ25K0YFBfZNlAr-0rHtvGJPmcXsP782sBAUPIhV6SX0-sCKE/pub?output=pdf" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">Download PDF</a>
+                        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR-CTX-66fj-BfUK4bswyZ5L93poGcC-CyQ5SG2J7-KBvIScvtA8OynrFra6z9v1uVbCZ0D91a7qQQD/pub?output=xlsx" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-200">Download Excel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add JavaScript for any interactive features if needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        // Toggle menu for mobile view
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
